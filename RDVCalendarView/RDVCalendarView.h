@@ -54,12 +54,12 @@ typedef NS_OPTIONS(NSInteger, RDVCalendarViewDayCellSeparatorType) {
 /**
  * Returns the back (previous month) button. (read-only)
  */
-@property (nonatomic, readonly) UIButton *backButton;
+@property (nonatomic, strong) UIButton *backButton;
 
 /**
  * Returns the forward (next month) button. (read-only)
  */
-@property (nonatomic, readonly) UIButton *forwardButton;
+@property (nonatomic, strong) UIButton *forwardButton;
 
 /**
  * Returns array containing the week day labels.
