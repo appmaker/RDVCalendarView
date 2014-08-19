@@ -84,14 +84,14 @@
         
         _backButton = [[UIButton alloc] init];
         [_backButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        [_backButton setTitle:@"Prev" forState:UIControlStateNormal];
+        [_backButton setTitle:NSLocalizedStringFromTable(@"calendar_prev", @"Calendar", nil) forState:UIControlStateNormal];
         [_backButton addTarget:self action:@selector(showPreviousMonth)
               forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_backButton];
         
         _forwardButton = [[UIButton alloc] init];
         [_forwardButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        [_forwardButton setTitle:@"Next" forState:UIControlStateNormal];
+        [_forwardButton setTitle:NSLocalizedStringFromTable(@"calendar_next", @"Calendar", nil) forState:UIControlStateNormal];
         [_forwardButton addTarget:self action:@selector(showNextMonth)
                  forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_forwardButton];
