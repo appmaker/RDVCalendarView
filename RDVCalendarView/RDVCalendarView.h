@@ -39,6 +39,8 @@ typedef NS_OPTIONS(NSInteger, RDVCalendarViewDayCellSeparatorType) {
 
 #pragma mark - Managing the Delegate
 
+
+
 /**
  * The object that acts as the delegate of the receiving calendar view.
  */
@@ -127,6 +129,8 @@ typedef NS_OPTIONS(NSInteger, RDVCalendarViewDayCellSeparatorType) {
 @property (atomic, strong, readonly) NSDateComponents *month;
 
 #pragma mark - Creating Calendar View Day Cells
+
+- (id)initWithFrame:(CGRect)frame andDate:(NSDate *)startDate;
 
 /**
  * Registers a class for use in creating new table cells.

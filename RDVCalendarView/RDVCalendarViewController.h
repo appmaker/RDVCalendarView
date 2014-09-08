@@ -26,6 +26,8 @@
 
 @interface RDVCalendarViewController : UIViewController <RDVCalendarViewDelegate>
 
+@property (nonatomic,strong) NSDate *startDate;
+
 /**
  * Returns the calendar view managed by the controller object.
  */

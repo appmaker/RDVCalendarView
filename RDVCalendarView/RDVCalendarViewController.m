@@ -30,7 +30,11 @@
 - (void)loadView {
     CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
     
-    _calendarView = [[RDVCalendarView alloc] initWithFrame:applicationFrame];
+    if (self.startDate == nil) {
+        self.startDate = [NSDate date];
+    }
+    
+    _calendarView = [[RDVCalendarView alloc] initWithFrame:applicationFrame andDate:self.startDate];
     [_calendarView setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     [_calendarView setSeparatorStyle:RDVCalendarViewDayCellSeparatorTypeHorizontal];
     [_calendarView setBackgroundColor:[UIColor whiteColor]];

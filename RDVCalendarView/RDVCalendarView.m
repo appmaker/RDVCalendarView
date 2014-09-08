@@ -52,7 +52,8 @@
 
 @implementation RDVCalendarView
 
-- (id)initWithFrame:(CGRect)frame {
+- (id)initWithFrame:(CGRect)frame andDate:(NSDate *)startDate
+{
     self = [super initWithFrame:frame];
     if (self) {
         _dayCells = [[NSMutableArray alloc] initWithCapacity:31];
@@ -102,9 +103,9 @@
         
         NSCalendar *calendar = [self calendar];
         
-        _currentDay = [calendar components:NSDayCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit fromDate:[NSDate date]];
+        _currentDay = [calendar components:NSDayCalendarUnit|NSMonthCalendarUnit|NSYearCalendarUnit fromDate:startDate];
         
-        NSDate *currentDate = [NSDate date];
+        NSDate *currentDate = startDate;
         
         _month = [calendar components:NSYearCalendarUnit|
                                       NSMonthCalendarUnit|
